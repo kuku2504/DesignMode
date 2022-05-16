@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DesignMode", "01DesignMode\01DesignMode.csproj", "{5F7A5C4E-D807-496E-A823-A6868A0202DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99深拷贝浅拷贝", "99深拷贝浅拷贝\99深拷贝浅拷贝.csproj", "{4A5967B3-4B60-4011-A29F-D13BE040340B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文档", "文档", "{8F8A686F-6E2F-43C0-92EE-D85598185573}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\PC\Desktop\设计模式.xmind = C:\Users\PC\Desktop\设计模式.xmind
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{5F7A5C4E-D807-496E-A823-A6868A0202DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F7A5C4E-D807-496E-A823-A6868A0202DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F7A5C4E-D807-496E-A823-A6868A0202DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5967B3-4B60-4011-A29F-D13BE040340B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5967B3-4B60-4011-A29F-D13BE040340B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5967B3-4B60-4011-A29F-D13BE040340B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5967B3-4B60-4011-A29F-D13BE040340B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
