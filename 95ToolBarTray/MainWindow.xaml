@@ -1,0 +1,23 @@
+﻿<Window x:Class="_95ToolBarTray.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_95ToolBarTray"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ToolBarTray Background="White">
+            <ToolBar Band="1" BandIndex="1">
+                <Button>
+                    <Image Source="/Frame.png" />
+                </Button>
+                <Separator/>
+                <Button>
+                    <Image Source="/Vector.jpg" />
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        
+    </Grid>
+</Window>

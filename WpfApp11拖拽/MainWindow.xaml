@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp11拖拽.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp11拖拽"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" >
+            <ContentControl MouseWheel="ContentControl_MouseWheel" MouseDown="ContentControl_MouseDown"  >
+                <Image Name="ImgCtl" Margin="-2,2,0,0" Source="/trycatch.png"/>
+            </ContentControl>
+        </ScrollViewer>
+    </Grid>
+</Window>

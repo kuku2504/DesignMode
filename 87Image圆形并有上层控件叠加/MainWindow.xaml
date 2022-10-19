@@ -1,0 +1,19 @@
+﻿<Window x:Class="_87Image圆形并有上层控件叠加.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_87Image圆形并有上层控件叠加"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <Image Source="/profilePhoto.jpeg" Width="100" Height="100" Panel.ZIndex="0">
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                </Image.Clip>
+            </Image>
+            <TextBlock Text="小小米" Canvas.Top="90" Canvas.Left="30" Panel.ZIndex="1" VerticalAlignment="Center"></TextBlock>
+        </Canvas>        
+    </Grid>
+</Window>

@@ -1,0 +1,207 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Label" x:Key="TopBubblePanel">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Grid>
+                            <Border CornerRadius="4" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Background="Yellow" HorizontalAlignment="Left" Margin="0,8.5,0,0" Padding="5">
+                                <ContentPresenter />
+                            </Border>
+                            <Canvas Width="10" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Background="Transparent">
+                                <Path Stroke="Black" StrokeThickness="0.5" Fill="Yellow">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M 0,10
+         L 0,10,5,0
+         L 5,0,10,10
+         "/>
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="BottomBubblePanel">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Grid>
+                            <Border CornerRadius="4" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Bottom" Margin="0,0,0,8.5" Background="#FFFFFF" HorizontalAlignment="Left" Padding="5">
+                                <ContentPresenter />
+                            </Border>
+                            <Canvas Width="15" Height="10" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0" Background="Transparent">
+                                <Path Stroke="Black"  Fill="#FFFFFF">
+                                    <Path.Data>
+                                        <!--<GeometryGroup>
+                                            <LineGeometry StartPoint="159,1" EndPoint="166.5,11"></LineGeometry>
+                                            <LineGeometry StartPoint="174,1" EndPoint="166.5,11"></LineGeometry>
+                                        </GeometryGroup>-->                                        
+                                        <PathGeometry Figures="M 0,0
+                                                              L 0,0,5,10
+                                                              L 5,10,10,0
+                                        "/>
+                                        <!--<PathGeometry Figures="M 159,0
+                                                             L 159,1,166.5,10
+                                                              L 166.5,10,174,0
+                                        "/>-->
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="LeftBubblePanel">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Grid>
+                            <Border CornerRadius="4" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Margin="8.5,0,0,0" Background="Yellow" HorizontalAlignment="Left" Padding="5">
+                                <ContentPresenter />
+                            </Border>
+                            <Canvas Width="10" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Background="Transparent">
+                                <Path Stroke="Black" StrokeThickness="0.5" Fill="Yellow">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M 10,0
+         L 10,0,0,5
+         L 0,5,10,10
+         "/>
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label" x:Key="RightBubblePanel">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Grid HorizontalAlignment="Left">
+                            <Border CornerRadius="4" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8.5,0" Background="Yellow" Padding="5">
+                                <ContentPresenter />
+                            </Border>
+                            <Canvas Width="10" Height="10" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0" Background="Transparent">
+                                <Path Stroke="Black" StrokeThickness="0.5" Fill="Yellow">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M 0,0
+         L 0,0,10,5
+         L 10,5,0,10
+         "/>
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Label Style="{StaticResource TopBubblePanel}" Tag="Top" Margin="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="abc" />
+                    <TextBox Width="80"/>
+                </StackPanel>
+            </StackPanel>
+        </Label>
+        <Label Style="{StaticResource BottomBubblePanel}" Tag="Top" Margin="2">
+            <StackPanel Width="194" Height="136">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="abc" />
+                    <TextBox Width="80"/>
+                </StackPanel>
+            </StackPanel>
+        </Label>
+        <Label Style="{StaticResource LeftBubblePanel}" Tag="Top" Margin="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="abc" />
+                    <TextBox Width="80"/>
+                </StackPanel>
+            </StackPanel>
+        </Label>
+        <Label Style="{StaticResource RightBubblePanel}" Tag="Top" Margin="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="abc" />
+                    <TextBox Width="80"/>
+                </StackPanel>
+            </StackPanel>
+        </Label>
+        <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+            <Button Name="btnTestPopup1" Width="100" Height="30" Content="Bottom" Click="btnTestPopup1_Click" />
+            <Button Name="btnTestPopup2" Width="100" Height="30" Content="Top" Click="btnTestPopup2_Click" />
+            <Button Name="btnTestPopup3" Width="100" Height="30" Content="Right" Click="btnTestPopup3_Click" />
+            <Button Name="btnTestPopup4" Width="100" Height="30" Content="Left" Click="btnTestPopup4_Click" />
+        </StackPanel>
+        <Popup Name="pop1" AllowsTransparency="True" StaysOpen="False" PopupAnimation="Slide" PlacementTarget="{Binding ElementName=btnTestPopup1}" Placement="Bottom" >
+            <Label Style="{StaticResource TopBubblePanel}" Tag="Top">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="abc" />
+                        <TextBox Width="80" Name="txtTest1" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Content="确定" Click="btnOK1_Click" Width="50" Height="25" Margin="5" />
+                        <Button Content="取消" Click="btnCancel1_Click" Width="50" Height="25" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </Label>
+        </Popup>
+        <Popup Name="pop2" AllowsTransparency="True" StaysOpen="False" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=btnTestPopup2}" Placement="Top" >
+            <Label Style="{StaticResource BottomBubblePanel}" Tag="Top">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="abc" />
+                        <TextBox Width="80" Name="txtTest2" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Content="确定" Click="btnOK2_Click" Width="50" Height="25" Margin="5"/>
+                        <Button Content="取消" Click="btnCancel2_Click" Width="50" Height="25" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </Label>
+        </Popup>
+        <Popup Name="pop3" AllowsTransparency="True" StaysOpen="False" PopupAnimation="Scroll" PlacementTarget="{Binding ElementName=btnTestPopup3}" Placement="Right" >
+            <Label Style="{StaticResource LeftBubblePanel}" Tag="Top">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="abc" />
+                        <TextBox Width="80" Name="txtTest3" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Content="确定" Click="btnOK2_Click" Width="50" Height="25" Margin="5"/>
+                        <Button Content="取消" Click="btnCancel3_Click" Width="50" Height="25" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </Label>
+        </Popup>
+        <Popup Name="pop4" AllowsTransparency="True" StaysOpen="False" PopupAnimation="None" PlacementTarget="{Binding ElementName=btnTestPopup4}" Placement="Left" >
+            <Label Style="{StaticResource RightBubblePanel}" Tag="Top">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="abc" />
+                        <TextBox Width="80" Name="txtTest4" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Content="确定" Click="btnOK4_Click" Width="50" Height="25" Margin="5"/>
+                        <Button Content="取消" Click="btnCancel4_Click" Width="50" Height="25" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </Label>
+        </Popup>
+    </StackPanel>
+</Window>
